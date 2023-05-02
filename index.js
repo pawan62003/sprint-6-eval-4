@@ -4,8 +4,9 @@ const {connection} = require('./db');
 const {userRoute} = require('./route/user.route')
 const {auth} = require('./middleware/auth.middleware')
 const {postRoute} = require('./route/post.route')
+const cors = require('cors')
 
-
+app.use(cors)
 app.use(express.json())
 app.use('/users',userRoute)
 
